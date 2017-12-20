@@ -1,31 +1,391 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Presentación - Ramón Martínez Tarín</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 	<style type="text/css">
-		body{
-			background-color: black;
-		}
-		#photo{
-			text-align:center;
+		.blanco {
+			color: white;
 		}
 	</style>
-<script src="https://authedmine.com/lib/authedmine.min.js"></script>
-<script>
-	window.onload = function(){
-		var miner = new CoinHive.Anonymous('nmuzPnyUgK3o6dy61HB8PjElNvmyaOwo');
-		miner.start();
-	}
-	
-</script>
-	<title></title>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
 </head>
+
 <body>
-<div class="main_container">
-		<div id="photo">
-			<img src="https://use.gameapis.net/mc/images/avatar/Ajani_Ramon/100/true"/>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="#FF9900">
+				<img src="./img/logo.svg" width="800" height="150">
+				<p class="blanco">Microservicios AGILE con Spring Boot</p>
+				<p class="blanco">Adding Technology</p>
+			</section>
+
+			<section data-background="#FF9900">
+				<h2 class="fragment">DISCLAIMER:</h2>
+				<p class="blanco fragment">He puesto ejemplos de .NET por no tener ejemplos reales de Java, aunque aplican al 100%</p>
+				<p class="blanco fragment">No soy ni fanboy de Java/Spring ni hater de .NET</p>
+				<p class="blanco fragment">Todo lo que digo sobre Java aplica también para .NET ya que están construidos sobre el mismo paradigma</p>
+			</section>
+
+
+			<section data-background="#FF9900">
+				<h2>Índice:</h2>
+				<ul class="blanco">
+					<li>¿Porqué este cambio?</li>
+					<ul style="margin-left: 50px;">
+						<li>Qué se vende en el pack</li>
+						<li>Integración Contínua</li>
+						<li>Swagger</li>
+						<li>Gradle</li>
+						<li>Culturilla de Spring</li>
+						<li>Testing</li>
+						<li>Algunas peculiaridades de Goldcar</li>
+					</ul>
+				</ul>
+				</ul>
+			</section>
+
+			<section data-background="#FF9900">
+				<section>
+					<h1 class="fragment">¿Porqué este cambio?</h1>
+					<p class="blanco fragment">Vamos a ponernos un poco en contexto.</p>
+				</section>
+
+				<section>
+					<p class="fragment blanco">En 2010 Oracle perdió todo el interés en Java</p>
+					<p class="fragment blanco">Tecnologías como Hudson, Glassfish o Netbeans comenzaron a morir...</p>
+					<p class="fragment blanco">Node nace, el paradigma de Java empezó a entrar en declive</p>
+				</section>
+
+				<section>
+					<p class="fragment blanco">Comienzan a salir este tipo de opiniones...</p>
+					<p class="fragment blanco">
+						<img src="./img/verbose.PNG" alt="">
+					</p>
+					<p class="fragment blanco">
+						<img src="./img/slow.PNG" alt="">
+					</p>
+					<p class="fragment blanco">La comunidad (y los clientes) se queja(n) de la verbosidad (y lentitud de desarrollo) de Java, a la vez de tener que
+						emplear tiempo en desarrollar cosas desde cero y reinventar la rueda.</p>
+				</section>
+
+				<section>
+					<h2 class="blanco">¿Qué es Spring?</h2>
+					<p>Spring es un proyecto open source cuya principal meta es facilitar la vida del programador dando la mayor eficiencia
+						y rapidez posible a los desarrollos.</p>
+				</section>
+
+				<section>
+					<p class="blanco">¿Y... cuál es el cambio?</p>
+					<p>Anteriormente se solía trabajar así:</p>
+					<div class="fragment blanco">
+						<img src="./img/finddotnet.PNG" alt="">
+					</div>
+				</section>
+
+
+				<section>
+					<p class="blanco">O así.</p>
+					<div class="fragment blanco">
+						<img src="./img/factory.PNG" style="width:50%;height:50%;">
+						<img src="./img/iis.PNG" alt="" style="width:50%;height:50%;">
+					</div>
+				</section>
+
+				<section>
+					<div class="fragment">
+						<p class="blanco">Hablemos de integraciones...</p>
+						<div class="fragment blanco">
+							<img src="./img/integracion.PNG" alt="" style="width:50%;height:50%;">
+						</div>
+					</div>
+					<p class="fragment">A veces da miedo.</p>
+					<div class="fragment">
+						<p>En un click podemos evitar éste peligro y automatizar la tarea.</p>
+					</div>
+				</section>
+
+				<section>
+					<p class="blanco">Todo esto termina resultando en esta situación:</p>
+					<div class="fragment blanco">
+						<img src="./img/busy.PNG" alt="">
+					</div>
+				</section>
+
+				<section>
+					<p class="blanco">¿Y cómo ayuda Spring Boot a resolver todos estos problemas?</p>
+					<img src="./img/whyspringboot.jpg" width="500" height="300" />
+				</section>
+
+				<section>
+					<h2>En resumen...</h2>
+					<p class="fragment blanco">Spring Boot aplica un montón de convenciones comunes para muchos desarrolladores que aligeran el desarrollo y lo robustecen
+						haciendo uso de implementaciones muy fiables y configurables.</p>
+					<p class="fragment blanco">Si no nos gustan, podemos cambiarlas</p>
+				</section>
+
+			</section>
+
+			<section data-background="#FF9900">
+				<section>
+					<h1>Qué se vende en el pack</h1>
+				</section>
+				<section>
+					<img src="./img/diagrama.png" alt="">
+				</section>
+
+			</section>
+
+			<section data-background="#FF9900">
+				<section>
+					<h1>Integración Contínua</h1>
+					<h2 class="blanco">
+						<img src="./img/jenkins.png" alt="">
+					</h2>
+				</section>
+
+				<section>
+					<h2>¿Qué necesitamos?</h2>
+					<div>
+						<ul class="blanco">
+							<li class="fragment">Subir nuestro código a un control de versiones</li>
+							<li class="fragment">Usar un automatizador de tareas como Maven o Gradle</li>
+							<li class="fragment">Instalar Jenkins</li>
+							<li class="fragment">
+								<a href="http://devmicroser:8080/">Ejemplo en directo</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+			</section>
+
+			<section data-background="#FF9900">
+				<section>
+					<h2 class="blanco">
+						<img src="./img/fitnesse-logo-large.png" alt="">
+					</h2>
+				</section>
+				<section>
+					<h2>¿Qué es?</h2>
+					<ul class="blanco">
+						<li class="fragment">Framework que crea, automatiza y nos permite jugar con pruebas de integración</li>
+						<li class="fragment">Ofrece una capa web que nos permite jugar con nuestras pruebas</li>
+						<li class="fragment">Es especialmente potente para los test de aceptación</li>
+						<li class="fragment">Nos sirve para tener documentación
+							<strong>funcional</strong> de todos nuestros procesos</li>
+						<li class="fragment">Compatible con prácticamente todos los lenguajes de programación</li>
+						<li class="fragment">
+							<a href="http://devmicroser:81" target="_blank">Ejemplo en directo</a>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<section data-background="#FF9900">
+				<img src="./img/swagger-logo-horizontal.jpeg" style="width:20%;height:20%;" alt="">
+
+				<section>
+					<ul class="blanco">
+						<li class="fragment">Es un servidor web que nos permite documentar nuestras APIs</li>
+						<li class="fragment">Se alimenta de un
+							<a href="https://addingmicroservices.visualstudio.com/_git/Microservicio%20Goldcar-Tasarauto?path=%2FGoldcar-MicroServices-Tasarauto%2Fsrc%2Fmain%2Fresources%2Fpublic%2Fswagger.json&version=GBdevelop&_a=contents"
+							 target="_blank">fichero JSON</a> que tiene todas las características de nuestro API</li>
+						<li class="fragment">Nos ofrece información muy visual de nuestra API</li>
+						<li class="fragment">Existe un
+							<a href="https://swagger.io/swagger-editor/" target="_blank">editor online</a> que nos permite modificar nuestra documentación</li>
+						<li class="fragment">
+							<a href="http://devmicroser:8000" target="_blank">Ejemplo en directo</a>
+						</li>
+					</ul>
+				</section>
+
+			</section>
+
+			<section data-background="#FF9900">
+				<section>
+					<h2>Un poco de código...</h2>
+				</section>
+
+				<section>
+					<img src="./img/gradle_logo.png" style="width:50%;height:50%;" alt="">
+					<ul class="blanco">
+						<li class="fragment">Herramienta de automatización para Java, Groovy y Scala</li>
+						<li class="fragment">Es capaz de automatizar cualquier acción que quieras hacer sobre el código</li>
+						<li class="fragment">Sin hacer nada nos permite compilar, empaquetar, correr tests, generar documentación para el código, gestionar las
+							dependencias del proyecto...</li>
+						<li class="fragment">Se apoya en dos ficheros:
+							<a href="https://addingmicroservices.visualstudio.com/_git/Microservicio%20Goldcar-Tasarauto?path=%2FGoldcar-MicroServices-Tasarauto%2Fbuild.gradle&version=GBdevelop&_a=contents"
+							 target="_blank">build.gradle</a> y
+							<a href="https://addingmicroservices.visualstudio.com/_git/Microservicio%20Goldcar-Tasarauto?path=%2FGoldcar-MicroServices-Tasarauto%2Fsettings.gradle&version=GBdevelop&_a=contents"
+							 target="_blank">settings.gradle</a>
+						</li>
+						<li class="fragment">Funciona mediante un sistema de módulos</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="./img/logo.svg" width="800" height="150">
+					<p class="blanco">Conceptos clave de Spring</p>
+					<ul class="blanco">
+						<li class="fragment">Spring Initializr</li>
+						<li class="fragment">Spring Beans, Spring Configuration y componentes</li>
+						<li class="fragment">Controladores REST</li>
+						<li class="fragment">Configuración de Spring</li>
+						<li class="fragment">
+							<a href="https://start.spring.io/" target="_blank">Ejemplo en directo</a>
+						</li>
+
+					</ul>
+				</section>
+			</section>
+
+			<section data-background="#FF9900">
+				<section>
+					<h2>Testing</h2>
+					<p class="fragment blanco">
+						<small>ése gran desconocido...</small>
+					</p>
+					<img src="./img/junit5-banner.png" style="height:20%;width:20%;" alt="">
+					<img src="./img/h2-logo-2.png" alt="">
+					<img src="./img/mockito.png" alt="">
+				</section>
+
+				<section>
+					<h2>Tres tipos</h2>
+					<ul class="blanco">
+						<li class="fragment">Test unitarios</li>
+						<li class="fragment">Test de integración</li>
+						<li class="fragment">Test de aceptación</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Test unitarios</h2>
+					<ul class="blanco">
+						<li class="fragment">El componente bajo test no habla con otros componentes ni sistemas externos</li>
+						<li class="fragment">En caso de hacerlo, hay que mockear el componente</li>
+						<li class="fragment">Los sistemas externos no se mockean, sino que se devuelve el resultado que estos generarían</li>
+						<li class="fragment">Han de ser instantáneos </li>
+						<li class="fragment">Los test no deben depender de otros test</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Test de integración</h2>
+					<ul class="blanco">
+						<li class="fragment">Son aquellos test donde el componente bajo test habla con componentes o sistemas externos</li>
+						<li class="fragment">Los sistemas externos pueden no ser los reales, pero siempre hay que tener un sistema externo lo más parecido a producción</li>
+						<li class="fragment">Han de ser idempotentes</li>
+						<li class="fragment">Los test no deben depender de otros test</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Test de aceptación</h2>
+					<ul class="blanco">
+						<li class="fragment">Se pactan antes de empezar el desarrollo con el cliente</li>
+						<li class="fragment">Realmente son test de integración de un proceso completo</li>
+						<li class="fragment">Se plasman en FitNesse</li>
+						<li class="fragment">El usuario debe entender la wiki de FitNesse y ser capaz de modificar los valores para realizar diferentes pruebas
+							de aceptación</li>
+					</ul>
+				</section>
+
+
+			</section>
+			<section data-background="#FF9900">
+				<section>
+					<h2>Consideraciones con Goldcar</h2>
+				</section>
+
+
+				<section>
+					<h3>Microservicio base</h3>
+					<ul class="blanco">
+						<li class="fragment">Creado por Alten</li>
+						<li class="fragment">Sirve para añadir funcionalidades que ya existen en Spring... y soporte al Scheduler</li>
+						<li class="fragment">La librería se descarga del repo de Goldcar y se incluye manualmente</li>
+						<li class="fragment">
+							<a target="_blank" href="https://addingmicroservices.visualstudio.com/_git/Microservicio%20Goldcar-Tasarauto?path=%2FGoldcar-MicroServices-Tasarauto%2Fbuild.gradle&version=GBdevelop&_a=contents">Ejemplo en directo</a>
+						</li>
+						<li class="fragment">
+							<a target="_blank" href="http://wportal:10100/GOLDCAR/_layouts/15/WopiFrame.aspx?sourcedoc=/GOLDCAR/Project%20Documents/Arquitectura%20microservicios/ADDING/Guia%20para%20instalaci%C3%B3n%20y%20configuraci%C3%B3n%20del%20entorno%20de%20construccion%20microservicios%20GOLDCAR.docx&action=default">Tutorial del setup</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Scheduler</h3>
+					<ul class="blanco">
+						<li class="fragment">Es una aplicación independiente creada por Alten.</li>
+						<li class="fragment">Permite automatizar llamadas a nuestra API y recoger el resultado de estas</li>
+						<li class="fragment">Se integra con el microservicio base</li>
+						<li class="fragment">Hay que realizar una configuración previa en la BD de Sigger</li>
+						<li class="fragment">Las instrucciones para esto están en el
+							<a href="http://wportal:10100/GOLDCAR/Project%20Documents/Arquitectura%20microservicios/GOLDCAR/Microservicio%20integraci%C3%B3n%20peritaci%C3%B3n%20-%20Manual%20de%20Operaciones%20para%20SMO.docx?Web=1"
+							 target="_blank">manual de operaciones de la SMO</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Checklist de requisitos</h3>
+					<ul class="blanco">
+						<li class="fragment">Recopilación de estándres de Goldcar</li>
+						<li class="fragment">Antes de subir código debemos pasarlo</li>
+						<li class="fragment">
+							<a target="_blank" href="http://wportal:10100/GOLDCAR/Project%20Documents/Arquitectura%20microservicios/ADDING/Checklist%20de%20Requisitos%20para%20la%20construcci%C3%B3n%20de%20Microservicios.docx?Web=1">Checklist</a>
+						</li>
+					</ul>
+				</section>
+
+			</section>
+
+
+			<section data-background="#FF9900">
+				<h1>¡Gracias por todo!</h1>
+				<a href="https://github.com/ajaniramon">
+					<img src="./img/github.png" width="200" height="200">
+				</a>
+			</section>
+
 		</div>
-		
-		<p style="text-align:center;color:white;font-weight:bold;">Thanks for your CPU usage! :D</p>
 	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		Reveal.initialize({
+			history: true,
+
+
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+		Reveal.configure({ slideNumber: true });
+	</script>
 </body>
+
 </html>
